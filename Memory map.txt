@@ -1,0 +1,44 @@
+; SimCity for CP/M Game variables.
+
+; **** Game variables to be saved or loaded from disk ****
+population0	equ	0xD3FF		; Byte 1. Least significant byte.
+population1	equ	0xD3FE		; Byte 2.
+population2	equ	0xD3FD		; Byte 3.
+population3	equ	0xD3FC		; Byte 4. Most significant byte.
+
+tax_rate0	equ	0xD3FB		; Byte 1. Least significant byte.
+tax_rate1	equ	0xD3FA		; Byte 2. Most significant byte.
+
+funds0		equ	0xD3F9		; Byte 1. Least significant byte. 
+funds1		equ	0xD3F8		; Byte 2.
+funds2		equ	0xD3F7		; Byte 3.
+funds3		equ	0xD3F6		; Byte 4. Most significant byte.
+
+pollution	equ	0xD3F5		; 1 byte.
+
+health		equ	0xD3F4		; 1 byte.
+
+year0		equ	0xD3F3		; Byte 0. Least significant byte.	
+year1		equ	0xD3F2		; Byte 1. Most significant byte.
+
+mayor		equ	0xD3F1		; 1 byte. Holds the current state of the City Mayor.
+
+map_array	equ	0xC400		; Holds map data. Base address + 3200 bytes. (0xC400 to 0xD080)
+
+
+; **** Game System variables ****
+mappointer	equ	0xC3FF		; Low byte. Current position in the map array.
+mappointer	equ	0xC3FE		; High byte. Current position in the map. 
+xpos		equ	0xC3FD		; Current X cursor position on the map grid.
+ypos		equ	0xC3FC		; Current Y cursor position on the map grid.
+
+mayormsgs	equ	0xC200		; Holds strings for Mayors messages. Base address + 256 bytes. (0xC200 to 0xC2FF)
+
+stack		equ	0xC1FF		; Top of stack. Stack space + 256 bytes. (0xC1FF to 0xC100)
+
+; **** Code start ****
+		org	0x100
+
+ 					; Users code here.
+
+;			0xC100    	; Top of user code space. 
