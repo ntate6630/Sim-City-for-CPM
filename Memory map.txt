@@ -32,6 +32,8 @@ mappointer	equ	0xC3FE		; High byte. Current position in the map.
 xpos		equ	0xC3FD		; Current X cursor position on the map grid.
 ypos		equ	0xC3FC		; Current Y cursor position on the map grid.
 
+Filename	equ	0xC3EB		; String to hold the filename. Base address + 16 bytes. (0xC3EB to 0xC3FB)
+
 mayormsgs	equ	0xC200		; Holds strings for Mayors messages. Base address + 256 bytes. (0xC200 to 0xC2FF)
 
 stack		equ	0xC1FF		; Top of stack. Stack space + 256 bytes. (0xC1FF to 0xC100)
